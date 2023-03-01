@@ -5,6 +5,13 @@ window.onload = function(){
     setInterval(loop, 1000/8);
 }
 
+
+function drawScore() {
+  ctx.font = "22px pixel";
+  ctx.fillStyle = "white";
+  ctx.fillText(`Score: ${tail-5}`, 8, 20);
+}
+
 xSnake = ySnake = 10; // Snake x and y position
 gs = tc = 20; // grid size and tile count
 xApple = yApple = 15; // Apple x and y position
@@ -43,6 +50,7 @@ function loop() {
     while(trail.length > tail){
         trail.shift();
     }
+    drawScore();
 
     if((xApple == xSnake) && (yApple==ySnake)){
         tail++;

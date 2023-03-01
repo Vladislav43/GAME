@@ -39,3 +39,8 @@ h1{
     padding-top: 50px;
     flex-direction: column;
 }
+
+@font-face {
+    font-family: 'pixel';
+    src: url('../fonts/pixel.ttf');
+}
